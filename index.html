@@ -5,12 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>El Faro - Periódico Local</title>
     <link rel="stylesheet" href="styles.css" />
-    <!-- aplicando css-->
+    <!-- Enlace a la nueva tipografía  -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
     >
   </head>
   <body>
-    <!-- Contenido del sitio web -->
+        <!-- Contenido del sitio web -->
     <header>
+      
       <h1>El Faro</h1>
       <img src="logo.png" alt="Logo de El Faro" />
     </header>
@@ -24,123 +30,103 @@
     </nav>
 
     <main>
+      <!-- Sección de noticias -->
       <section id="noticias-generales">
         <h2>Noticias Generales</h2>
-        <!-- Noticias generales, el video y el audio -->
-        <section>
-          <h2>Noticias</h2>
-          <table>
-            <tr>
-              <th>Título</th>
-              <th>Categoría</th>
-              <th>Texto del artículo</th>
-            </tr>
-            <tr>
-              <td>
-                Agobiantes deudas y bonos "basura": Los turbulentos días de WOM
-                que llevaron al Capítulo 11 de EE.UU.
-              </td>
-              <td>Nacional</td>
-              <td>
-                La compañía arrastró un 2023 marcado por su incapacidad para
-                cumplir con el despliegue de las antenas 5G que debía instalar
-                por licitación. Hoy tiene $4.940 millones impagos con 592
-                acreedores. Esta mañana Wom informó que se acogió a
-                reorganización judicial bajo el capítulo 11 de la ley de
-                quiebras de Estados Unidos. La decisión se tomó tras meses
-                turbulentos, en los cuales la compañía enfrentó problemas en la
-                implementación del 5G, dificultades para pagarle a sus
-                acreedores y el despido de parte de la primera línea gerencial.
-                En medio de eso -y con el objetivo de retomar el rumbo- volvió a
-                Chile para "tomar las riendas" Chris Bannister, CEO con el cual
-                la marca se expandió en el país. La determinación de la empresa,
-                propiedad de la firma británica Novator Partners LL, en
-                cualquier caso, se veía venir. En las últimas semanas, de hecho,
-                sus bonos se desplomaron ante los temores por la refinanciación
-                de la deuda.
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Fiscalía formalizará a alcalde Jadue (PC) por delitos de
-                administración desleal, cohecho y fraude al Fisco
-              </td>
-              <td>Nacional</td>
-              <td>
-                Si se acoge la petición contra el alcalde de Recoleta, será el
-                3er Juzgado de Garantía de Santiago el que deberá fijar fecha.
-                La Fiscalía Centro Norte formalizará al alcalde de Recoleta,
-                Daniel Jadue (PC), por diversos ilícitos que habría cometido en
-                el contexto de las farmacias populares. Es así como se le
-                imputarán los delitos referidos a administración desleal por la
-                Asociación Chilena de Municipalidades con Farmacias Populares;
-                cohecho, por convenio con la empresa Quality; fraude al fisco,
-                por administración municipal; delito concursal por ocultar
-                bienes de Achifarp y se usaron en otra empresa.
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Funcionario de Presidencia es asaltado en Ñuñoa: Le robaron el
-                celular con el que habla con Boric
-              </td>
-              <td>Nacional</td>
-              <td>
-                El trabajador pertenece al área de Gestión Ciudadana. Además le
-                sustrajeron credenciales con las que ingresa a La Moneda y
-                artículos personales. La noche de ayer lunes un funcionario de
-                Presidencia fue víctima de robo. Este hecho ocurrió en la
-                intersección de Avenida Rodrigo de Araya con Ignacio Carrera
-                Pinto, en la comuna de Ñuñoa. El afectado es el jefe subrogante
-                de Gestión Ciudadana del equipo de Presidencia. Desde
-                Presidencia señalaron escuetamente que "afortunadamente se
-                encuentra en buenas condiciones". Le sustrajeron un teléfono
-                celular con el que se comunica con el Presidente Gabriel Boric,
-                así como también poseía información de seguridad. También le
-                arrebataron dos credenciales con las que ingresa a La Moneda y
-                su mochila con artículos personales y su billetera. Según
-                relató, se movilizaba a pie, cuando descendieron seis sujetos
-                desde vehículos, los que con armas blancas lo intimidaron y
-                agredieron con golpes.
-              </td>
-            </tr>
-            <!-- Agrega más filas para las otras noticias -->
-          </table>
+        <!-- Grilla de artículos -->
+        <div class="article-grid">
+          <!-- Artículo 1 -->
+          <article>
+            <h3>Agobiantes deudas y bonos "basura": Los turbulentos días de WOM
+              que llevaron al Capítulo 11 de EE.UU.
+              
+            <p>La compañía arrastró un 2023 marcado por su incapacidad para
+              cumplir con el despliegue de las antenas 5G que debía instalar
+              por licitación. Hoy tiene $4.940 millones impagos con 592
+              acreedores. Esta mañana Wom informó que se acogió a
+              reorganización judicial bajo el capítulo 11 de la ley de
+              quiebras de Estados Unidos. La decisión se tomó tras meses
+              turbulentos, en los cuales la compañía enfrentó problemas en la
+              implementación del 5G, dificultades para pagarle a sus
+              acreedores y el despido de parte de la primera línea gerencial.
+              En medio de eso -y con el objetivo de retomar el rumbo- volvió a
+              Chile para "tomar las riendas" Chris Bannister, CEO con el cual
+              la marca se expandió en el país. La determinación de la empresa,
+              propiedad de la firma británica Novator Partners LL, en
+              cualquier caso, se veía venir. En las últimas semanas, de hecho,
+              sus bonos se desplomaron ante los temores por la refinanciación
+              de la deuda.
+              
+          </article>
+          
+          <!-- Artículo 2 -->
+          <article>
+            <h3>Fiscalía formalizará a alcalde Jadue (PC) por delitos de
+              administración desleal, cohecho y fraude al Fisco
+              
+            <p>Si se acoge la petición contra el alcalde de Recoleta, será el
+              3er Juzgado de Garantía de Santiago el que deberá fijar fecha.
+              La Fiscalía Centro Norte formalizará al alcalde de Recoleta,
+              Daniel Jadue (PC), por diversos ilícitos que habría cometido en
+              el contexto de las farmacias populares. Es así como se le
+              imputarán los delitos referidos a administración desleal por la
+              Asociación Chilena de Municipalidades con Farmacias Populares;
+              cohecho, por convenio con la empresa Quality; fraude al fisco,
+              por administración municipal; delito concursal por ocultar
+              bienes de Achifarp y se usaron en otra empresa.
+            
+          </article>
 
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/DrZR31wF64M?si=OcJD1c3hjOQFJoVW"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
-          <audio src="audionacional.mp3" controls></audio>
-        </section>
+          <!-- Artículo 3 -->
+          <article>
+            <h3>Funcionario de Presidencia es asaltado en Ñuñoa: Le robaron el
+              celular con el que habla con Boric
+              
+            <p>El trabajador pertenece al área de Gestión Ciudadana. Además le
+              sustrajeron credenciales con las que ingresa a La Moneda y
+              artículos personales. La noche de ayer lunes un funcionario de
+              Presidencia fue víctima de robo. Este hecho ocurrió en la
+              intersección de Avenida Rodrigo de Araya con Ignacio Carrera
+              Pinto, en la comuna de Ñuñoa. El afectado es el jefe subrogante
+              de Gestión Ciudadana del equipo de Presidencia. Desde
+              Presidencia señalaron escuetamente que "afortunadamente se
+              encuentra en buenas condiciones". Le sustrajeron un teléfono
+              celular con el que se comunica con el Presidente Gabriel Boric,
+              así como también poseía información de seguridad. También le
+              arrebataron dos credenciales con las que ingresa a La Moneda y
+              su mochila con artículos personales y su billetera. Según
+              relató, se movilizaba a pie, cuando descendieron seis sujetos
+              desde vehículos, los que con armas blancas lo intimidaron y
+              agredieron con golpes.
+             
+          </article>
+
+        </div>
+        <!-- Video de noticias -->
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/DrZR31wF64M?si=OcJD1c3hjOQFJoVW"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+        <!-- Audio de noticias -->
+        <audio src="audionacional.mp3" controls></audio>
       </section>
 
+      <!-- Sección de deportes -->
       <section id="Deporte">
         <h2>Deportes Generales</h2>
-        <!-- Aquí irán las noticias de deporte -->
-        <section>
-          <h2>Deportes</h2>
-          <table>
-            <tr>
-              <th>Título</th>
-              <th>Categoría</th>
-              <th>Texto del artículo</th>
-            </tr>
-
-            <tr>
-              <td>
-                Las promesas que comienzan a aparecer ¿Qué viene para el tenis
-                chileno tras Garin, Jarry y Tabilo?
-              </td>
-              <td>Deporte-Tenis</td>
-              <td>
-                Chile tiene a dos Top 100 y otros dos Top 150 en el ranking
+        <!-- Grilla de artículos de deportes -->
+        <div class="article-grid">
+          <!-- Artículo 1 de deportes -->
+          <article>
+            <h3>Las promesas que comienzan a aparecer ¿Qué viene para el tenis
+              chileno tras Garin, Jarry y Tabilo?
+              <p>Chile tiene a dos Top 100 y otros dos Top 150 en el ranking
                 mundial, pero detrás hay una larga brecha. Luego de varios años
                 difíciles, el tenis chileno está viviendo un buen presente en su
                 rama masculina con varios jugadores instalados en la élite del
@@ -153,17 +139,14 @@
                 Alejandro Tabilo (96°), Nicolás Jarry (142°, fue 38° en 2019) y
                 Tomás Barrios (145°) están metidos de lleno en el circuito mayor
                 y con mucho por entregar, porque todos tienen 26 años o menos.
-              </td>
-            </tr>
-
-            <tr>
-              <td>
-                Revelan el fuerte motivo detrás de la sorpresiva separación
-                entre Novak Djokovic y su coach, Goran Ivanisevic
-              </td>
-              <td>Deporte-Tenis</td>
-              <td>
-                La ruptura entre ambos fue sorpresiva. El anuncio de Novak
+                
+          </article>
+          
+          <!-- Artículo 2 de deportes -->
+          <article>
+            <h3>Revelan el fuerte motivo detrás de la sorpresiva separación
+              entre Novak Djokovic y su coach, Goran Ivanisevic
+              <p>La ruptura entre ambos fue sorpresiva. El anuncio de Novak
                 Djokovic sobre la separación con su coach, Goran Ivanisevic,
                 golpeó fuerte. Fue una ruptura totalmente inesperada. "Goran y
                 yo decidimos dejar de trabajar juntos hace unos días. Nuestra
@@ -183,17 +166,12 @@
                 de actitud" y le recriminó "el poco entrenamiento previo y de
                 mala gana" que realizó antes del encuentro, según contaron
                 fuentes cercanas al jugador.
-              </td>
-            </tr>
-
-            <tr>
-              <td>
-                ¿Qué debería hacer Alexis Sánchez? Los consejos y las opciones
-                que tendría para definir su futuro
-              </td>
-              <td>Deportes-Futbol</td>
-              <td>
-                El delantero chileno acaba contrato con el Inter a final de
+          </article>
+          <!-- Artículo 3 de deportes -->
+          <article>
+            <h3>¿Qué debería hacer Alexis Sánchez? Los consejos y las opciones
+              que tendría para definir su futuro
+              <p>El delantero chileno acaba contrato con el Inter a final de
                 temporada. Otra vez Alexis Sánchez debe tomar una decisión. Su
                 contrato con el Inter de Milán expira en junio y su futuro es
                 incierto. Pese a tener escasos minutos, el delantero chileno ha
@@ -203,44 +181,34 @@
                 aseguran que el futuro del goleador histórico de la "Roja"
                 estaría fuera del club lombardo. No le propondrían acuerdo por
                 su costoso salario.
-              </td>
-            </tr>
-            <!-- Agrega más filas para las otras noticias -->
-          </table>
-
-          <img width="560" height="315" src="alexis.png" alt="Alexis Sanchez" />
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/w-DPQXfqJhE?si=DUlmuhfPgWOv08cI"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
-        </section>
+                <img src="alexis.png" alt="Alexis Sanchez" />
+                
+          </article>
+        </div>
+        <!-- Video de deportes -->
+        <iframe
+          
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/w-DPQXfqJhE?si=DUlmuhfPgWOv08cI"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
       </section>
 
+      <!-- Sección de negocios -->
       <section id="Negocios">
         <h2>Negocios</h2>
-        <!-- Aquí irán las noticias de negocios/emprendimientos -->
-        <section>
-          <h2>Negocios</h2>
-          <table>
-            <tr>
-              <th>Título</th>
-              <th>Categoría</th>
-              <th>Texto del artículo</th>
-            </tr>
-            <tr>
-              <td>
-                Gremio minero responde a Grau por Huachipato: "Pareciera que
-                trata de trasladar la responsabilidad"
-              </td>
-              <td>Economia</td>
-              <td>
-                "Creemos que las mineras no pueden ser indiferentes", ha
+        <!-- Grilla de artículos de negocios -->
+        <div class="article-grid">
+          <!-- Artículo 1 de negocios -->
+          <article>
+            <h3>Gremio minero responde a Grau por Huachipato: "Pareciera que
+              trata de trasladar la responsabilidad"
+              <p>"Creemos que las mineras no pueden ser indiferentes", ha
                 reiterado en los últimos días el ministro de Economía, Nicolás
                 Grau, en referencia a la crisis que enfrenta la Siderúrgica
                 Huachipato y al rol que podrían cumplir las empresa mineras para
@@ -255,17 +223,13 @@
                 aplicó el Gobierno al acero chino, Grau ha sostenido reuniones
                 con empresa mineras para evaluar acciones que podría tomar el
                 sector privado.
-              </td>
-            </tr>
-
-            <tr>
-              <td>
-                Cierre del dólar este martes 2 de abril: Revisa en cuánto
-                terminó y qué produjo los movimientos
-              </td>
-              <td>Economia</td>
-              <td>
-                El dólar registró una importante baja este martes a la espera de
+                
+          </article>
+         <!-- Artículo 2 de negocios -->
+          <article>
+            <h3>Cierre del dólar este martes 2 de abril: Revisa en cuánto
+              terminó y qué produjo los movimientos
+              <p>El dólar registró una importante baja este martes a la espera de
                 la decisión de tasa de interés en Chile, que el Banco Central
                 dará a conocer esta tarde y para la cual se prevé una baja de 75
                 puntos base, para dejarla en 6,5%. Mientras tanto, el billete
@@ -277,17 +241,13 @@
                 agresivas de la tasa de interés que estaba llevando a cabo en
                 las anteriores reuniones", sostuvo Felipe Sepúlveda, estratega
                 de mercados de XTB Latam.
-              </td>
-            </tr>
-
-            <tr>
-              <td>
-                Mercado tras alto Imacec: Crece el optimismo económico para
-                2024, pero alertan por factores que "exageran" el dato
-              </td>
-              <td>Economia</td>
-              <td>
-                Nadie niega la positiva sorpresa que trajo el Indicador Mensual
+                
+          </article>
+          <!-- Artículo 1 de negocios -->
+          <article>
+            <h3>Mercado tras alto Imacec: Crece el optimismo económico para
+              2024, pero alertan por factores que "exageran" el dato
+              <p>Nadie niega la positiva sorpresa que trajo el Indicador Mensual
                 de Actividad Económica (Imacec) de febrero,con un potente
                 crecimiento mensual de 4,5% en dice meses -el mayor desde mayo
                 de 2022- que se ubicó en la parte más alta de las expectativas y
@@ -301,29 +261,27 @@
                 las incertidumbres y viendo el futuro con mayor esperanza. Este
                 año 2024 es un año de crecimiento económico", subrayó la
                 ministra vocera de Gobierno, Camila Vallejo.
-              </td>
-            </tr>
-            <!-- Agrega más filas para las otras noticias -->
-          </table>
-
-          <img
-            width="560"
-            height="315"
-            src="mercado.png"
-            alt="Mercadotrasimacec"
-          />
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/9f1oe6xYnzE?si=3fD05iRr2YxPwcsy"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
-        </section>
+                <img src="mercado.png" alt="Mercado tras imacec" width="560" height="315" />
+          </article>
+          
+        </div>
+        <!-- Video de negocios -->
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/9f1oe6xYnzE?si=3fD05iRr2YxPwcsy"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
       </section>
     </main>
+
+    <!-- Footer con estilo distinto -->
+    <footer style="background-color: #c9d2d0; color: #31231e;">
+      <p>© 2024 El Faro - Todos los derechos reservados</p>
+    </footer>
   </body>
 </html>
