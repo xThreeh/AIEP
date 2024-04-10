@@ -1,59 +1,40 @@
+/* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif; /* Nueva tipografía */
     margin: 0;
     padding: 0;
+    background-color: #f5f5f5; /* Fondo gris */
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
+header, nav, main {
+    background-color: #fff; /* Fondo blanco  */
 }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    background-color: #f2f2f2;
-    overflow: hidden;
+/* Estilos de grilla  */
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 }
 
-nav li {
-    float: left;
+/* Estilos al pasar el mouse sobre los artículos */
+.article-grid article:hover {
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Letra blanca */
 }
 
-nav li a {
-    display: block;
-    color: #333;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+/* Estilos del footer */
+footer {
+    background-color: #c9d2d0; /* Color de fondo */
+    color: #31231e; /* Color de letra */
 }
 
-nav li a:hover {
-    background-color: #ddd;
+/* Estilos de enlaces */
+a {
+    font-weight: bold; /* Fuente en negrita */
+    text-decoration: none; /* Quitar subrayado */
 }
 
-main {
-    padding: 20px;
-}
-
-section {
-    margin-bottom: 40px;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-th, td {
-    padding: 8px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-}
-
-th {
-    background-color: #f2f2f2;
+a:hover {
+    text-decoration: underline; /* Mantener subrayado al pasar el mouse */
 }
