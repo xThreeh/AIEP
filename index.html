@@ -16,9 +16,26 @@
   <body>
         <!-- Contenido del sitio web -->
     <header>
-      
+      <div class="centrar-portada">
+
       <h1>El Faro</h1>
       <img src="logo.png" alt="Logo de El Faro" />
+
+      <!-- Fecha y Hora -->
+        <div id="fechaHora">
+          <script>
+            function actualizarFechaHora() {
+              const ahora = new Date();
+              const opciones = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
+              const fechaHora = ahora.toLocaleString('es-ES', opciones);
+              document.getElementById('fechaHora').innerHTML = fechaHora;
+            }
+            actualizarFechaHora();
+            setInterval(actualizarFechaHora, 1000);
+          </script>
+        </div>
+      </div>
+
     </header>
 
     <nav>
@@ -29,10 +46,29 @@
       </ul>
     </nav>
 
+
+
+
+<!-- Nuevo formulario  -->
+<form id="formAgregarArticulo">
+  <input type="text" placeholder="Título del artículo" id="tituloArticulo" required>
+  <textarea placeholder="Descripción del artículo" id="descripcionArticulo" required></textarea>
+  <select id="seccionArticulo" required>
+    <option value="" disabled selected>Selecciona una sección</option>
+    <option value="noticias-generales">Noticias Generales</option>
+    <option value="Deporte">Deportes</option>
+    <option value="Negocios">Negocios</option>
+  </select>
+  <button type="submit">Agregar Artículo</button>
+</form>
+
+
+
+
     <main>
       <!-- Sección de noticias -->
       <section id="noticias-generales">
-        <h2>Noticias Generales</h2>
+        <h2>Noticias Generales</h2> 
         <!-- Grilla de artículos -->
         <div class="article-grid">
           <!-- Artículo 1 -->
@@ -55,8 +91,7 @@
               propiedad de la firma británica Novator Partners LL, en
               cualquier caso, se veía venir. En las últimas semanas, de hecho,
               sus bonos se desplomaron ante los temores por la refinanciación
-              de la deuda.
-              
+              de la deuda.  
           </article>
           
           <!-- Artículo 2 -->
@@ -73,8 +108,7 @@
               Asociación Chilena de Municipalidades con Farmacias Populares;
               cohecho, por convenio con la empresa Quality; fraude al fisco,
               por administración municipal; delito concursal por ocultar
-              bienes de Achifarp y se usaron en otra empresa.
-            
+              bienes de Achifarp y se usaron en otra empresa.  
           </article>
 
           <!-- Artículo 3 -->
@@ -98,7 +132,6 @@
               relató, se movilizaba a pie, cuando descendieron seis sujetos
               desde vehículos, los que con armas blancas lo intimidaron y
               agredieron con golpes.
-             
           </article>
 
         </div>
@@ -117,11 +150,19 @@
         <audio src="audionacional.mp3" controls></audio>
       </section>
 
+
+
+      
       <!-- Sección de deportes -->
       <section id="Deporte">
         <h2>Deportes Generales</h2>
+
+        
+
         <!-- Grilla de artículos de deportes -->
         <div class="article-grid">
+
+
           <!-- Artículo 1 de deportes -->
           <article>
             <h3>Las promesas que comienzan a aparecer ¿Qué viene para el tenis
@@ -144,6 +185,8 @@
           
           <!-- Artículo 2 de deportes -->
           <article>
+
+
             <h3>Revelan el fuerte motivo detrás de la sorpresiva separación
               entre Novak Djokovic y su coach, Goran Ivanisevic
               <p>La ruptura entre ambos fue sorpresiva. El anuncio de Novak
@@ -168,6 +211,9 @@
                 fuentes cercanas al jugador.
           </article>
           <!-- Artículo 3 de deportes -->
+
+
+
           <article>
             <h3>¿Qué debería hacer Alexis Sánchez? Los consejos y las opciones
               que tendría para definir su futuro
@@ -243,7 +289,7 @@
                 de mercados de XTB Latam.
                 
           </article>
-          <!-- Artículo 1 de negocios -->
+          <!-- Artículo 3 de negocios -->
           <article>
             <h3>Mercado tras alto Imacec: Crece el optimismo económico para
               2024, pero alertan por factores que "exageran" el dato
@@ -276,8 +322,46 @@
           referrerpolicy="strict-origin-when-cross-origin"
           allowfullscreen
         ></iframe>
+
+
+        <!-- Formulario de contacto-->
+        <h2>Contacto</h2>
+        <form id="formContacto">
+          <input type="text" placeholder="Nombre" id="nombre" required>
+          <textarea placeholder="Mensaje" id="mensaje" required></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+
       </section>
     </main>
+
+     <!-- Contador de articulos-->
+    <script>
+      const formAgregarArticulo = document.getElementById('formAgregarArticulo');
+      const contenedorArticulos = document.querySelectorAll('.article-grid');
+    
+      formAgregarArticulo.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const titulo = document.getElementById('tituloArticulo').value;
+      const descripcion = document.getElementById('descripcionArticulo').value;
+      const seccionSeleccionada = document.getElementById('seccionArticulo').value;
+      const nuevoArticulo = document.createElement('article');
+      nuevoArticulo.innerHTML = `
+        <h3>${titulo}</h3>
+        <p>${descripcion}</p>
+      `;
+      const contenedorArticulos = document.querySelector(`#${seccionSeleccionada} .article-grid`);
+      contenedorArticulos.appendChild(nuevoArticulo);
+      actualizarContadorArticulos(contenedorArticulos.parentElement);
+      formAgregarArticulo.reset();
+    });
+    function actualizarContadorArticulos(contenedor) {
+      const contador = contenedor.querySelectorAll('article').length;
+      contenedor.previousElementSibling.textContent = `${contador} artículos`;
+    }
+    </script>
+
+
 
     <!-- Footer con estilo distinto -->
     <footer style="background-color: #c9d2d0; color: #31231e;">
