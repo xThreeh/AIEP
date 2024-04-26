@@ -4,73 +4,335 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>El Faro - Periódico Local</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    />
     <link rel="stylesheet" href="styles.css" />
-    <!-- Enlace a la nueva tipografía  -->
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
-
-    >
   </head>
   <body>
-        <!-- Contenido del sitio web -->
-    <header>
-      <div class="centrar-portada">
+    <!-- R7: Sección superior de avisos -->
+    <div
+      class="alert alert-warning alert-dismissible fade show mb-0"
+      role="alert"
+    >
+      <strong>¡Atención!</strong> Descuentos de hasta 30% en tiendas Retail, No
+      pierdas tu oportunidad. https://www.falabella.com/falabella-cl
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="alert"
+        aria-label="Close"
+      ></button>
+    </div>
 
-      <h1>El Faro</h1>
-      <img src="logo.png" alt="Logo de El Faro" />
-
-      <!-- Fecha y Hora -->
-        <div id="fechaHora">
-          <script>
-            function actualizarFechaHora() {
-              const ahora = new Date();
-              const opciones = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
-              const fechaHora = ahora.toLocaleString('es-ES', opciones);
-              document.getElementById('fechaHora').innerHTML = fechaHora;
-            }
-            actualizarFechaHora();
-            setInterval(actualizarFechaHora, 1000);
-          </script>
+    <header class="bg-light mb-4">
+      <div class="container">
+        <div class="d-flex align-items-center justify-content-between py-3">
+          <h1 class="m-0">El Faro</h1>
+          <img src="logo.png" alt="Logo de El Faro" />
+          <div id="fechaHora"></div>
         </div>
       </div>
-
     </header>
 
-    <nav>
-      <ul>
-        <li><a href="#noticias-generales">Inicio</a></li>
-        <li><a href="#Deporte">Deporte</a></li>
-        <li><a href="#Negocios">Negocios</a></li>
-      </ul>
+    <!-- R3: Acceso a otras secciones separadas del menú -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
+      <div class="container">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#noticias-generales">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Deporte">Deporte</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Negocios">Negocios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#otros">Otros</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
 
+    <main class="container mb-4">
+      <!-- R4: Vista de artículos más recientes de manera destacada -->
+      <section class="mb-4">
+        <h2>Artículos Destacados</h2>
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="card">
+                <img
+                  src="MJP.jpg"
+                  class="card-img-top"
+                  alt="..."
+                  style="width: 800px; height: 300px"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    María José Prieto sobre querella contra Cristián Campos por
+                    abuso sexual: "Nos consta que él es inocente"
+                  </h5>
+                  <p class="card-text">
+                    En declaraciones a "Wikén" de El Mercurio, la actriz afirmó
+                    que el hecho de que exista una denuncia contra su marido,
+                    "no quiere decir que sea culpable de lo que se le acusa". La
+                    actriz María José Prieto se refirió por primera vez de forma
+                    directa a la situación que afecta a su marido, Cristián
+                    Campos, luego de que la Fundación para la Confianza
+                    interpusiera una querella en representación de Raffaella Di
+                    Girolamo, hija de Claudia Di Girolamo, por presuntos abusos
+                    sexuales cometidos en su contra por el actor cuando ella era
+                    niña y adolescente. Hasta ahora, Prieto solo había
+                    compartido en sus redes sociales una carta publicada por
+                    cercanos a Campos en apoyo a este, donde calificaron la
+                    acción legal de Di Girolamo como "injusta" y "aberrante".
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card">
+                <img
+                  src="matias.jpg"
+                  class="card-img-top"
+                  alt="..."
+                  style="width: 800px; height: 300px"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    "Hay olor a marihuana en todo el Monumental": a Matías
+                    Camacho le vuela la cabeza el humeante hedor del estadio
+                  </h5>
+                  <p class="card-text">
 
+                    El presidente del Club Social y Deportivo Colo Colo aseguró
+                    que es un problema que vienen identificando hace rato.
+                    Matías Camacho se acercó al bloque de Aníbal Mosa y el Club
+                    Social y Deportivo Colo Colo terminó decidiendo las
+                    elecciones de Blanco y Negro. Con la cabeza puesta en la
+                    celebración del centenario y la renovación del estadio, el
+                    presidente del CSD salió a dar su parecer sobre los
+                    principales sujetos de interés para los hinchas. En
+                    conversación con Los Tenores de Radio ADN, Matías Camacho
+                    aseguró que pese a su decisiva función en las elecciones de
+                    la concesionaria, lo que esperan desde el Club Social y
+                    Deportivo es que, precisamente, no exista la Sociedad
+                    Anónima.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card">
+                <img
+                  src="alex.jpg"
+                  class="card-img-top"
+                  alt="..."
+                  style="width: 800px; height: 300px"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    De sacar a Alexis de Manchester a ser rival en Copa América:
+                    Solsjkaer y su nuevo destino
+                  </h5>
+                  <p class="card-text">
+                    
+                    El técnico noruego que marginó al chileno del United es el
+                    principal candidato para dirigir el cuadro norteamericano
+                    que jugará ante La Roja en el torneo. Si los hinchas
+                    chilenos tienen una figura del fútbol mundial que le tienen
+                    bastante resquemor en Chile, ese es el noruego Ole-Gunnar
+                    Solskjaer. Mientras estuvo a cargo del Manchester United fue
+                    el responsable de sacar del equipo a Alexis Sánchez, a
+                    mediados del 2019. “Tomaría la misma decisión si pudiera
+                    regresar seis o doce meses hacia atrás“, afirmó el estratega
+                    escandinavo en agosto de ese año, quien agregó para
+                    justificar el adiós del chileno que “esto no es un concurso
+                    de popularidad. Debo tomar decisiones que creo que sean
+                    beneficiosas para el club“.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
+        </div>
+      </section>
 
+      <!-- R5: Vista de otros artículos también en pantalla, pero más chicos -->
+      <section class="mb-4">
+        <h2>Ultimas noticias</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="card h-100">
+              <img src="40.jpg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">
+                  Ley de las 40 horas: Este viernes comenzó a regir la reducción
+                  de la jornada laboral
+                </h5>
+                <p class="card-text">
+                  Este viernes se vive un día histórico a lo largo de todo el
+                  país en materia de derechos laborales, debido a que comenzará
+                  a regir la gradualidad de la ley de las 40 horas, que este año
+                  rebajará la jornada de trabajo de 44 a 45 horas semanales. Se
+                  trata de una ley que se discutió por ocho años, de la que fue
+                  precursora la actual ministra vocera de Gobierno, Camila
+                  Vallejo, y la presidenta de la Cámara de Diputados, Karol
+                  Cariola.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="kast.jpg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">
+                  José Antonio Kast critica en seminario internacional al
+                  Presidente Boric por “woke”: “Hay días que ni siquiera va a
+                  trabajar”
+                </h5>
+                <p class="card-text">
+                  En respuesta a las críticas del excandidato presidencial, el
+                  ministro Elizalde señaló que “no se construye un mejor país
+                  agrediendo e insultando”. En la Cumbre CPAC 2024 en Hungría,
+                  el líder del Partido Republicano, José Antonio Kast, criticó
+                  duramente al Presidente Gabriel Boric, calificándolo de “woke”
+                  y anunciando su candidatura presidencial para los próximos
+                  comicios. Durante su discurso, el expostulante a La Moneda
+                  lanzó comentarios incisivos contra el Mandatario, destacando
+                  su gestión y su comportamiento, como el hecho de que “llega a
+                  trabajar tarde, que se va para la casa temprano, e incluso hay
+                  días que ni siquiera va a trabajar”.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="pdi.jpg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">
+                  Revelan que detectives PDI integraban célula del Tren de
+                  Aragua dedicada a comercio sexual en Santiago
+                </h5>
+                <p class="card-text">
+                  Un reportaje reveló que dos detectives de Policía de
+                  Investigaciones (PDI) integraban una célula del Tren de Aragua
+                  que operaría delitos de comercio sexual en la Plaza de Armas,
+                  en Santiago Centro. De acuerdo a la investigación de Mega, fue
+                  en medio de la detención de una adolescente venezolana en
+                  noviembre de 2022, que se develó la vinculación de ambos
+                  policías con dicha organización criminal. Lo anterior, luego
+                  de que se interviniera el celular de Yariel Ulloa López, un
+                  ciudadano cubano que cumplía el rol de captar a adolescentes y
+                  mujeres para ejercer explotación sexual.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-<!-- Nuevo formulario  -->
-<form id="formAgregarArticulo">
-  <input type="text" placeholder="Título del artículo" id="tituloArticulo" required>
-  <textarea placeholder="Descripción del artículo" id="descripcionArticulo" required></textarea>
-  <select id="seccionArticulo" required>
-    <option value="" disabled selected>Selecciona una sección</option>
-    <option value="noticias-generales">Noticias Generales</option>
-    <option value="Deporte">Deportes</option>
-    <option value="Negocios">Negocios</option>
-  </select>
-  <button type="submit">Agregar Artículo</button>
-</form>
+      <!--en proceso de mejora--> 
+        <form id="formAgregarArticulo" class="mb-4">
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Título del artículo"
+            id="tituloArticulo"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <textarea
+            class="form-control"
+            placeholder="Descripción del artículo"
+            id="descripcionArticulo"
+            required
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <select class="form-control" id="seccionArticulo" required>
+            <option value="" disabled selected>Selecciona una sección</option>
+            <option value="noticias-generales">Noticias Generales</option>
+            <option value="Deporte">Deportes</option>
+            <option value="Negocios">Negocios</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Agregar Artículo</button>
+      </form>
 
-
-
-
-    <main>
-      <!-- Sección de noticias -->
-      <section id="noticias-generales">
-        <h2>Noticias Generales</h2> 
-        <!-- Grilla de artículos -->
-        <div class="article-grid">
+      <!-- R2: Secciones mejor organizadas -->
+      <section id="noticias-generales" class="mb-4">
+        <h2>Noticias Generales</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <!-- Artículos de noticias generales -->
           <!-- Artículo 1 -->
           <article>
             <h3>Agobiantes deudas y bonos "basura": Los turbulentos días de WOM
@@ -133,36 +395,13 @@
               desde vehículos, los que con armas blancas lo intimidaron y
               agredieron con golpes.
           </article>
-
         </div>
-        <!-- Video de noticias -->
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/DrZR31wF64M?si=OcJD1c3hjOQFJoVW"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
-        <!-- Audio de noticias -->
-        <audio src="audionacional.mp3" controls></audio>
       </section>
 
-
-
-      
-      <!-- Sección de deportes -->
-      <section id="Deporte">
+      <section id="Deporte" class="mb-4">
         <h2>Deportes Generales</h2>
-
-        
-
-        <!-- Grilla de artículos de deportes -->
-        <div class="article-grid">
-
-
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <!-- Artículos de deportes -->
           <!-- Artículo 1 de deportes -->
           <article>
             <h3>Las promesas que comienzan a aparecer ¿Qué viene para el tenis
@@ -231,25 +470,12 @@
                 
           </article>
         </div>
-        <!-- Video de deportes -->
-        <iframe
-          
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/w-DPQXfqJhE?si=DUlmuhfPgWOv08cI"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
       </section>
 
-      <!-- Sección de negocios -->
-      <section id="Negocios">
+      <section id="Negocios" class="mb-4">
         <h2>Negocios</h2>
-        <!-- Grilla de artículos de negocios -->
-        <div class="article-grid">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <!-- Artículos de negocios -->
           <!-- Artículo 1 de negocios -->
           <article>
             <h3>Gremio minero responde a Grau por Huachipato: "Pareciera que
@@ -309,63 +535,106 @@
                 ministra vocera de Gobierno, Camila Vallejo.
                 <img src="mercado.png" alt="Mercado tras imacec" width="560" height="315" />
           </article>
-          
         </div>
-        <!-- Video de negocios -->
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/9f1oe6xYnzE?si=3fD05iRr2YxPwcsy"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
-
-
-        <!-- Formulario de contacto-->
-        <h2>Contacto</h2>
-        <form id="formContacto">
-          <input type="text" placeholder="Nombre" id="nombre" required>
-          <textarea placeholder="Mensaje" id="mensaje" required></textarea>
-          <button type="submit">Enviar</button>
-        </form>
-
       </section>
+
+      <!-- R3: Acceso a otras secciones separadas del menú -->
+      <section id="otros" class="mb-4">
+        <h2>Otros</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <!-- Artículos de otras secciones -->
+        </article>
+        <!-- Artículo 3 de negocios -->
+        <article>
+          <h3>“Pasándolo chancho…”: aclaran supuesto carrete de Francisco Kaminski en Brasil tras quiebre amoroso con Carla Jara
+            <p>El pasado lunes, surgieron nuevos antecedentes relacionados con el cahuín farandulero del momento: el triángulo amoroso entre Francisco Kaminski, Carla Jara y Camila Andrade, la “tercera en discordia”.
+                Claro, pues en el programa Sígueme, Daniella Campos contó detalle de un supuesta noche de carrete del animador, la cual habría tenido lugar tras los mensajes que su compañera le había enviado, y que habrían generado una discusión con su esposa.
+                “Hay dos fuentes que me cuentan que Kaminski no estaba echando de menos a ninguna Camila Andrade en Chile, ni tampoco estaba llorando por ninguna Carla Jara en Brasil”, informó la panelista del espacio de espectáculos de TV+.
+              <img src="kam.png" alt="Mercado tras imacec" width="560" height="315" />
+        </article>
+
+        </div>
+      </section>
+
+      <!-- Formulario de contacto-->
+      <h2>Contacto</h2>
+      <form id="formContacto" class="mb-4">
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Nombre"
+            id="nombre"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <textarea
+            class="form-control"
+            placeholder="Mensaje"
+            id="mensaje"
+            required
+          ></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
     </main>
 
-     <!-- Contador de articulos-->
-    <script>
-      const formAgregarArticulo = document.getElementById('formAgregarArticulo');
-      const contenedorArticulos = document.querySelectorAll('.article-grid');
-    
-      formAgregarArticulo.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const titulo = document.getElementById('tituloArticulo').value;
-      const descripcion = document.getElementById('descripcionArticulo').value;
-      const seccionSeleccionada = document.getElementById('seccionArticulo').value;
-      const nuevoArticulo = document.createElement('article');
-      nuevoArticulo.innerHTML = `
-        <h3>${titulo}</h3>
-        <p>${descripcion}</p>
-      `;
-      const contenedorArticulos = document.querySelector(`#${seccionSeleccionada} .article-grid`);
-      contenedorArticulos.appendChild(nuevoArticulo);
-      actualizarContadorArticulos(contenedorArticulos.parentElement);
-      formAgregarArticulo.reset();
-    });
-    function actualizarContadorArticulos(contenedor) {
-      const contador = contenedor.querySelectorAll('article').length;
-      contenedor.previousElementSibling.textContent = `${contador} artículos`;
-    }
-    </script>
+    <!-- R6: Un footer más grande -->
+    <footer class="bg-dark text-light py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h5>Acerca de "El Faro"</h5>
+            <p>
+              Información adicional sobre el periódico El Faro y su historia.
 
-
-
-    <!-- Footer con estilo distinto -->
-    <footer style="background-color: #c9d2d0; color: #31231e;">
-      <p>© 2024 El Faro - Todos los derechos reservados</p>
+              En construccion y nuevas funcion este año 2024, Trabajando en su desarrollo para complacer a la audiencia
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h5>Enlaces Útiles</h5>
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-light">https://www.adnradio.cl/</a></li>
+              <li><a href="#" class="text-light">https://www.emol.com/</a></li>
+              <li><a href="#" class="text-light">https://www.biobiochile.cl/</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h5>Contacto</h5>
+            <p>
+              Dirección: Quilicura<br />
+              Santiago,Chile<br />
+              Teléfono: Pronto<br />
+              Email: franco.ceballos@correoaiep.cl
+            </p>
+          </div>
+        </div>
+        <hr class="bg-light" />
+        <p class="text-center mb-0">
+          &copy; 2023 El Faro - Todos los derechos reservados
+        </p>
+      </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      function actualizarFechaHora() {
+        const ahora = new Date();
+        const opciones = {
+          weekday: "long",
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+          hour: "numeric",
+          minute: "numeric",
+          second: "numeric",
+        };
+        const fechaHora = ahora.toLocaleString("es-ES", opciones);
+        document.getElementById("fechaHora").innerHTML = fechaHora;
+      }
+      actualizarFechaHora();
+      setInterval(actualizarFechaHora, 1000);
+    </script>
   </body>
 </html>
